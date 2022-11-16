@@ -19,7 +19,7 @@ export function LoginPage() {
             </Styled.LogoWrapper>
             <Title>Acesse sua conta</Title>
             <TextField name='email' label='E-mail' icon={<Mail />} />
-            <TextField name='email' label='Senha' icon={<Key />} />
+            <TextField name='password' label='Senha' icon={<Key />} />
             <Button text='Entrar' />
             <Styled.ForgotPassword>Esqueceu a senha?</Styled.ForgotPassword>
             <Styled.CreateAccountWrapper>

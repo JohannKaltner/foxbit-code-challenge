@@ -12,8 +12,14 @@ export function VariantionBadge({ variation }) {
   const icon = isVariationPositive ? <ChevronUp /> : <ChevronDown />;
 
   return (
-    <Styled.VariationBadgeContainer isVariationPositive={isVariationPositive}>
-      <Styled.BadgeText isVariationPositive={isVariationPositive}>
+    <Styled.VariationBadgeContainer
+      data-cy='crypto-item-badge'
+      isVariationPositive={isVariationPositive}
+    >
+      <Styled.BadgeText
+        data-cy='crypto-item-badge-text'
+        isVariationPositive={isVariationPositive}
+      >
         {variation ? icon : null}
         {variation ? smallFractionFormat(variation) : fallbackSkeleton}%
       </Styled.BadgeText>

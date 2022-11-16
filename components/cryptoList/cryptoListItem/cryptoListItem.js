@@ -38,12 +38,12 @@ export function CryptoListItem({
   }, [updateCryptoPrice]);
 
   return (
-    <Styled.CryptoListItemWrapper>
+    <Styled.CryptoListItemWrapper data-cy='crypto-item'>
       <Styled.Section>
         <img src={`${imageUrl}.svg`} alt={Symbol} width='28px' height='28px' />
         <VariantionBadge variation={Rolling24HrPxChange} />
       </Styled.Section>
-      <Styled.Section>{Symbol}</Styled.Section>
+      <Styled.Section data-cy='crypto-item-symbol'>{Symbol}</Styled.Section>
       <Styled.Section>
         <Styled.PriceText>
           <Styled.Currency>R$</Styled.Currency>
@@ -52,7 +52,7 @@ export function CryptoListItem({
       </Styled.Section>
       <Styled.VolumeContainer>
         <Styled.VolumeIndicator>Volume (24h):</Styled.VolumeIndicator>
-        <Styled.VolumeText>
+        <Styled.VolumeText data-cy='crypto-item-volume'>
           {Rolling24HrVolume
             ? smallFractionFormat(Rolling24HrVolume)
             : fallbackSkeleton}
